@@ -44,11 +44,11 @@
 
     <script>
         // WebSocket and SIP configuration
-        const socket = new JsSIP.WebSocketInterface('wss://webrtc.aaairan.net:8089/ws');
+        const socket = new JsSIP.WebSocketInterface('wss://your.domain.com:8089/ws');
         const configuration = {
             sockets: [socket],
-            uri: 'sip:1001@webrtc.aaairan.net',
-            password: '1001@Ashiyaneh',
+            uri: 'sip:1001@your.domain.com:',
+            password: 'P@ssw0rd',
             trace_sip: true
         };
 
@@ -87,7 +87,7 @@
                 callButton.classList.add('hangup');
 
                 // Initiate a call
-                const targetUri = 'sip:7777@webrtc.aaairan.net';
+                const targetUri = 'sip:7777@your.domain.com:';
                 const options = {
                     mediaConstraints: { audio: true, video: false },
                     pcConfig: {
