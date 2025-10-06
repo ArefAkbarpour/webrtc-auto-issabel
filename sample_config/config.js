@@ -1,7 +1,7 @@
 const config = {
-    socketUrl: "wss://webrtc.aaairan.net:8089/ws",
+    socketUrl: "wss://your.domain.com:8089/ws",
     sipUri: "sip:1001@webrtc.aaairan.net",
-    sipPassword: "1001@Ashiyaneh",
-    targetUri: "sip:1000@webrtc.aaairan.net",
+    sipPassword: "P@ss0wrd",
+    targetUri: "sip:1000@your.domain.com",
     stunServer: "stun:stun.l.google.com:19302"
 };
