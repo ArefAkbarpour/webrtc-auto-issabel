@@ -11,7 +11,7 @@ const config = {
     const configuration = {
         sockets: [socket],
         uri: 'sip:1001@your.domain.net',
-        password: '1001@Ashiyaneh',
+        password: 'yourpassword',
         trace_sip: false
     };
     const ua = new JsSIP.UA(configuration);
