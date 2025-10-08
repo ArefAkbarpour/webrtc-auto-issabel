@@ -10,7 +10,7 @@ const config = {
     const socket = new JsSIP.WebSocketInterface('wss://webrtc.aaairan.net:8089/ws');
     const configuration = {
         sockets: [socket],
-        uri: 'sip:1001@webrtc.aaairan.net',
+        uri: 'sip:1001@your.domain.net',
         password: '1001@Ashiyaneh',
         trace_sip: false
     };
