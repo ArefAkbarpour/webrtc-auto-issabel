@@ -1,0 +1,122 @@
+/* Root CSS variables for theming */
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #29abe2; /* Light blue accent */
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --button-bg: #333333;
+    --button-hover-bg: #444444;
+    --drawer-bg: transparent; /* Make the drawer background transparent */
+}
+
+/* General Body Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Floating Call Button Styles */
+#callButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    padding: 0;
+    outline: none;
+}
+
+#callButton:hover {
+    transform: scale(1.1);
+}
+
+/*Style for Call Icon inside the blue circle button*/
+.call-icon {
+    width: 30px; /* adjust the icon size */
+    height: 30px; /* adjust the icon size */
+    position: absolute; /* absolute positioning to make it center */
+    top: 50%; /* vertical alignment */
+    left: 50%; /* horizontal alignment */
+    transform: translate(-50%, -50%); /* translate to the center */
+    pointer-events: none; /* prevent the icon from interfering with the button click */
+}
+
+/* Drawer Styles (Initially Hidden) */
+.drawer {
+    position: fixed;
+    bottom: 100px; /* Increased distance from the call button */
+    right: 20px;
+    transform-origin: bottom right; /* Animation origin */
+    z-index: 99;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease; /* More dynamic animation */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Disable clicks when hidden */
+}
+
+.drawer.show {
+    transform: scale(1);
+    opacity: 1; /* Fade in */
+    pointer-events: auto; /* Enable clicks */
+}
+
+/* Department Options Container */
+.department-options {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(34, 34, 34, 0.9); /* Dark translucent background */
+    border-radius: 10px;
+    overflow: hidden; /* Hide rounded corners overflow */
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Department Button Styles */
+.department-button {
+    background-color: transparent; /* No background initially */
+    color: var(--text-color);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem; /* Slightly smaller text */
+    outline: none;
+    display: block; /* Full width button */
+    text-align: center; /* Center the text */
+}
+
+.department-button:hover {
+    background-color: rgba(51, 51, 51, 0.7); /* Darker translucent hover */
+}
+
+.department-button:active {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Media Query for Larger Screens (e.g., Tablets and Desktops) */
+@media (min-width: 768px) {
+    #callButton {
+        width: 70px;
+        height: 70px;
+    }
+
+    .call-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+}
