@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Drawer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Call Button -->
+    <button id="callButton" aria-label="Open Call Options">
+        <img src="call-icon.svg" alt="Call" class="call-icon">
+    </button>
+
+    <!-- Call Drawer -->
+    <div id="callDrawer" class="drawer">
+        <div class="department-options">
+            <button class="department-button" data-department="sales">Sales</button>
+            <button class="department-button" data-department="support">Support</button>
+            <button class="department-button" data-department="technical">Technical</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
